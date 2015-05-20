@@ -10,22 +10,12 @@ Sources:
   http://stackoverflow.com/questions/27048940/trying-to-retrieve-
   data-from-database-then-pass-to-html-in-railss-view         - Ajax jQuery
   
-Installing Sass:
-  http://andrew.stwrt.ca/posts/sinatra-coffeescript-sass      - Sass
-  
 
-Things we still need to do:
-  Set up PosgresSql database (and set up SQLite for testing?)
-  Getting the data from the database using Ajax
   
 Set up Heroku and link domain:
   https://devcenter.heroku.com/articles/custom-domains
-  
-Linking Css and Javascript files:
-  is there a special way to do this or just the normal link tag (HAML style)
+
   
 
-Questions I have:
-  How exactly do i go about changing content from index to second page?
-  
-
+RACK_ENV=production rake assets:precompile
+RACK_ENV=production rake assets:clean
