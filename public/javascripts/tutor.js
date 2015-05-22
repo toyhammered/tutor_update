@@ -38,16 +38,18 @@ $(document).ready(function() {
     e.preventDefault();
     time_clicked = $(this).data('time-chosen');
     console.log("You clicked: " + time_clicked);
+    $("#morning li, #afternoon li, #evening li").remove();
 
     $.getJSON('/tutor?time_chosen=' + time_clicked + '&day_chosen=' + day_clicked, function(data) {
       console.log(data);
-    /*
-      raw_template = $('#course-page-template').html();
+      
+      raw_template = $('#course-page-' + time_clicked).html();
       template = Handlebars.compile(raw_template);
-      placeHolder = $('#content-changer');
+      placeHolder = $('#' + time_clicked);
+      
       html = template(data);
-      placeHolder.replaceWith(html);
-    */
+      placeHolder.append(html);
+      
     }); // end of JSON statement
   }); // end of click statement
   

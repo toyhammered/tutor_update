@@ -50,8 +50,8 @@ get '/tutor' do
 
   time_chosen = '"' + @time_chosen + '"'
   day_chosen = '"' + @day_chosen + '"'
- Tutor.select("tutors.name, tutors.email, availabilities.from, availabilities.to").joins(:availability).where("tutors.id = availabilities.tutor_id AND availabilities.time = #{time_chosen} AND availabilities.day = #{day_chosen}").all.each do |tutor|
-   all_tutors << tutor
+ Tutor.select("tutors.name, tutors.email, availabilities.start_time, availabilities.end_time, availabilities.room").joins(:availability).where("tutors.id = availabilities.tutor_id AND availabilities.time = #{time_chosen} AND availabilities.day = #{day_chosen}").all.each do |tutor|
+      all_tutors << tutor
  end
  
   

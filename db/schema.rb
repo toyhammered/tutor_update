@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20150501214958) do
     t.integer "tutor_id"
     t.string  "day"
     t.string  "time"
-    t.time    "from"
-    t.time    "to"
+    t.time    "start_time"
+    t.time    "end_time"
+    t.integer "room"
   end
 
   add_index "availabilities", ["tutor_id"], name: "index_availabilities_on_tutor_id"
