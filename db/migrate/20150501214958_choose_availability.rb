@@ -3,6 +3,7 @@ class ChooseAvailability < ActiveRecord::Migration
     create_table :availabilities do |t|
       t.belongs_to :tutor, index:true
       t.string :day
+      t.string :time
       t.time :from
       t.time :to
       

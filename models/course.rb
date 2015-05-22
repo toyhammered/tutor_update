@@ -1,3 +1,3 @@
 class Course < ActiveRecord::Base
-    has_many :tutors
+    has_many :tutor
 end

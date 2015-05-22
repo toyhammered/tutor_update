@@ -43,20 +43,41 @@ get '/' do
 end
 
 get '/tutor' do
+  @time_chosen = params[:time_chosen]
   @day_chosen = params[:day_chosen]
-  all_tutors = Tutor.find_by course_id: @course_name.id
-  json all_tutors
-end
+  
+  all_tutors = []
 
-get '/availability' do
+  time_chosen = '"' + @time_chosen + '"'
+  day_chosen = '"' + @day_chosen + '"'
+ Tutor.select("tutors.name, tutors.email, availabilities.from, availabilities.to").joins(:availability).where("tutors.id = availabilities.tutor_id AND availabilities.time = #{time_chosen} AND availabilities.day = #{day_chosen}").all.each do |tutor|
+   all_tutors << tutor
+ end
  
+  
+  
+  # all_tutors = Tutor.find_by course_id: $course_name_id
+  # all_times = Availability.find_each all_tutors.id
+  
+  puts "******************"
+  puts "Day Chosen: #{@day_chosen}"
+  puts "Time Chosen: #{@time_chosen}"
+  puts "Course ID: #{$course_name_id}"
+  puts "All Tutors: #{all_tutors}"
+  # puts "All Times: #{all_times}"
+  puts "******************"
+  
+  json all_tutors
 end
 
 get '/course' do
   # query = {}
   # query.merge(name: params[:course_name]) if !!params[:course_name]
-  @course_name = params[:course_name]
-  course_chosen = Course.find_by name: @course_name
+  course_name = params[:course_name]
+
+  course_chosen = Course.find_by name: course_name
+  $course_name_id = course_chosen.id
+
   json course_chosen
 end
 

@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20150501214958) do
   create_table "availabilities", force: :cascade do |t|
     t.integer "tutor_id"
     t.string  "day"
+    t.string  "time"
     t.time    "from"
     t.time    "to"
   end
