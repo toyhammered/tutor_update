@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@media (max-width: 500px) {
+    .main.container .majors1 div {
+        width: 100%;
+        margin-bottom: 1px;
+        margin-right: 0;
+    }
+    .row div {
+        width: 100%;
+    }
+    .majors1 {
+        margin-bottom: 0rem;
+    }
+
+}
+
+

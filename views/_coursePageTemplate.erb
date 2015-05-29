@@ -36,23 +36,44 @@
     </div>
     
     <div class="row times">
-      <a href="#">
-        <div class="col-xs-2" data-time-chosen="morning">
-            <h2>Morning</h2>
-        </div>
-      </a>
-      <ul id="morning">
+    
       
-      </ul>
-      <a href="#">
-        <div class="col-xs-2" data-time-chosen="afternoon">
-            <h2>Afternoon</h2>
-        </div>
-      </a>
-      <ul id="afternoon">
+        <a href="#">
+          <div class="col-xs-2" data-time-chosen="morning">
+              <h2>Morning</h2>
+          </div>
+        </a>
+        <ul id="morning">
+        
+        </ul>
       
-      </ul>
       
+        <a href="#">
+          <div class="col-xs-2" data-time-chosen="afternoon">
+              <h2>Afternoon</h2>
+          </div>
+        </a>
+        <ul id="afternoon">
+        
+        </ul>
+      
+
+        <a href="#">
+          <div class="col-xs-2" data-time-chosen="evening">
+              <h2>Evening</h2>
+          </div>
+        </a>
+        <ul id="evening">
+        
+        </ul>
+    </div>
+    
+      <form id="send_email" enctype="application/JSON">
+      <input type="text" name="fullname" placeholder="Full Name" value="Daniel Rassiner"><br>
+      <input type="text" name="subject" placeholder="Email Subject" value="Web Help"><br>
+      <textarea name="message" rows="10" cols="50" placeholder="Your Message Here" >I need Help with web design homework!</textarea>
+      <input type="submit" formmethod="post" formaction="/email" value="Send Email">
+    </form>
       
 
   </div>

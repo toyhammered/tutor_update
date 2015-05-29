@@ -34,19 +34,31 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    domain_name (0.5.24)
+      unf (>= 0.0.5, < 1.0.0)
     execjs (2.5.2)
     hike (1.2.3)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     json (1.8.2)
+    kgio (2.9.3)
+    mime-types (2.6.1)
     minitest (5.6.1)
     multi_json (1.11.0)
+    netrc (0.10.3)
     pg (0.18.2)
     rack (1.6.1)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    raindrops (0.13.0)
     rake (10.4.2)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     ripl (0.7.1)
       bond (~> 0.5.1)
     ripl-multi_line (0.3.1)
@@ -56,6 +68,9 @@ GEM
       rack-test (~> 0.6.2)
       ripl (>= 0.7.0)
     sass (3.4.13)
+    sendgrid-ruby (0.0.3)
+      rest-client
+      smtpapi
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -73,6 +88,7 @@ GEM
       sprockets-sass (~> 1.2)
     sinatra-partial (0.4.0)
       sinatra
+    smtpapi (0.1.0)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -96,6 +112,13 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.1)
+    unicorn (4.9.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -104,6 +127,7 @@ DEPENDENCIES
   activerecord
   pg
   sass
+  sendgrid-ruby
   sinatra
   sinatra-activerecord
   sinatra-asset-pipeline
@@ -112,3 +136,4 @@ DEPENDENCIES
   sqlite3
   tux
   uglifier
+  unicorn

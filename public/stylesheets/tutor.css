@@ -1,12 +1,27 @@
 @charset "UTF-8";
 /* CSS Document */
+/* link reset */
+a {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* main styling */
+
+html, body {
+    color:#33373a;
+    font-family: 'Inconsolata' ;
+}
 
 body {
     margin-top: 6.571429rem;
+    
 }
-a:hover {
-    text-decoration: none;
-}
+
 .main .majors1 div {
     width: 33%;
     margin-right: 1px;
@@ -127,36 +142,134 @@ div .main.container.reserve {
 }
 .row.times {
     margin-top: 4em;
+    
 }
+
+/* clicking on day (ie: Monday) */
+
+
+.row.times .col-xs-2 h3{
+    font-size:2rem;
+}
+.row.days .col-xs-2 h3{
+    font-size:2rem;
+}
+
 .row.days .col-xs-2 {
     background-color: rgba(252, 253, 142, 1);
     margin-right: 0.1rem;
     margin-bottom: 0.1rem;
-    padding: 1rem;
-    border: thin solid #F8DE1D;
+    padding: 0rem;
+    border: thin solid #F6ECB7;
     text-align: center;
+    font-size:1rem;
+    width:16.58%;
+    
 }
-.row.times .col-xs-2 {
+
+.row.days h2
+{
+     margin-left: 0rem;
+     margin-top:1rem;
+}
+
+.row.times h2
+{
+     margin-left: 0rem;
+     margin-top:1rem;
+}
+
+ .row.times .col-xs-2 {
     background-color: #FAC6D1;
     margin-right: 0.1rem;
-    padding: 1rem;
+    padding: 0rem;
     border: thin solid #F681B9;
     text-align: center;
+    font-size:1rem;
+    width:16.58%;
+
+   
+} 
+
+.row.days .col-xs-2:link
+{
+ color:#f2ee9c;
+  text-decoration:none;
 }
-.main.container .row.times {
+
+
+.row.days .col-xs-2:visited
+{
+color:#424242;
+text-decoration:none;
+background-color: #f9f906;
+}
+
+
+
+.row.days .col-xs-2:hover
+{
+color:#424242;
+background-color: #f9f906;
+text-decoration:none;
+}
+
+
+.row.days .col-xs-2:active
+{
+color:#424242;
+text-decoration:none;
+background-color: #f2ea22;
+}
+
+
+.main.container .row.times 
+{
     margin-top: 4em;
 }
-@media (max-width: 500px) {
-    .main.container .majors1 div {
-        width: 100%;
-        margin-bottom: 1px;
-        margin-right: 0;
-    }
-    .row div {
-        width: 100%;
-    }
-    .majors1 {
-        margin-bottom: 0rem;
-    }
-    .reserve {}
+
+#morning ul:nth-child(odd), #afternoon ul:nth-child(odd), #evening ul:nth-child(odd) 
+{
+    background-color: #FCE6EA;
+  
 }
+#morning ul:nth-child(even), #afternoon ul:nth-child(even), #evening ul:nth-child(even) {
+    background-color: #FAC6D1;
+  
+}
+
+
+
+#morning ul, #afternoon ul, #evening ul 
+{   
+    list-style-type: none;   
+    padding:0;
+    margin-bottom:0;
+    margin-left:-3.5%;
+    width:17.1%;
+
+   
+   
+}
+
+#morning ul li, #afternoon ul li, #evening ul li
+{
+    
+    padding:0;
+    margin:0;
+    position:relative;    
+
+      
+}
+
+ul
+{
+    margin-bottom: 0;
+}
+
+form
+{
+    
+    
+}
+    

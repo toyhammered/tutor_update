@@ -50,14 +50,9 @@ get '/tutor' do
 
   time_chosen = '"' + @time_chosen + '"'
   day_chosen = '"' + @day_chosen + '"'
- Tutor.select("tutors.name, tutors.email, availabilities.start_time, availabilities.end_time, availabilities.room").joins(:availability).where("tutors.id = availabilities.tutor_id AND availabilities.time = #{time_chosen} AND availabilities.day = #{day_chosen}").all.each do |tutor|
+ Tutor.select("tutors.name, tutors.email, availabilities.start_time, availabilities.end_time, availabilities.room").joins(:availability).where("tutors.id = availabilities.tutor_id AND tutors.course_id = #{$course_name_id} AND availabilities.time = #{time_chosen} AND availabilities.day = #{day_chosen}").all.each do |tutor|
       all_tutors << tutor
  end
- 
-  
-  
-  # all_tutors = Tutor.find_by course_id: $course_name_id
-  # all_times = Availability.find_each all_tutors.id
   
   puts "******************"
   puts "Day Chosen: #{@day_chosen}"
@@ -81,8 +76,24 @@ get '/course' do
   json course_chosen
 end
 
-post '/email' do ||
+post '/email' do
   # Sendgrid.send request.body.email, request.body.message
+  puts "******************"
+  puts request.POST.inspect
+  puts request.media_type
+  puts "******************"
+  # request.body.rewind  # in case someone already read it
+  @fullname = params[:fullname]
+  @subject = params[:subject]
+  @message = params[:message]
+  puts "******************"
+  puts @fullname
+  puts @subject
+  puts @message
+  puts "******************"
+  
+
+  
   'email sent!'
 end
   

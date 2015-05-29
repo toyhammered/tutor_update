@@ -1,17 +1,35 @@
 <script id="course-page-morning" type="text/x-handlebars-template">
     {{#each this}}
-        <li>Name: {{name}} Time: {{start_time}}am-{{end_time}}pm, Room: {{room}}</li>
+        <ul class="morning_list">
+            <a href="#">
+            <li>Name: {{name}}</li>
+            <li>Time: {{start_time}}am - {{end_time}}pm</li>
+            <li>Room: {{room}}</li>
+            </a>
+        </ul>
     {{/each}}
 </script>
 
 <script id="course-page-afternoon" type="text/x-handlebars-template">
     {{#each this}}
-        <li>Name: {{name}} Time: {{start_time}}am-{{end_time}}pm, Room: {{room}}</li>
+        <ul class="afternoon_list">
+            <a href="#">
+            <li>Name: {{name}}</li>
+            <li>Time: {{start_time}}am - {{end_time}}pm</li>
+            <li>Room: {{room}}</li>
+            </a>
+        </ul>
     {{/each}}
 </script>
 
 <script id="course-page-evening" type="text/x-handlebars-template">
     {{#each this}}
-        <li>Name: {{name}} Time: {{start_time}}am-{{end_time}}pm, Room: {{room}}</li>
+        <ul class="evening_list">
+            <a href="#">
+            <li>Name: {{name}}</li>
+            <li>Time: {{start_time}}am - {{end_time}}pm</li>
+            <li>Room: {{room}}</li>
+            </a>
+        </ul>
     {{/each}}
 </script>

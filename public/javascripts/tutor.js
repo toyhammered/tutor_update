@@ -21,24 +21,32 @@ $(document).ready(function() {
       placeHolder = $('#content-changer');
       html = template(data);
       placeHolder.replaceWith(html);
-      $(".times").hide();
+      $(".times, #send_email").hide();
 
     }); // end of JSON statement
   }); // end of click statement
 
-  var day_clicked;
-  $(document).on("click", ".days a div", function(e) {
+  var day_clicked,previous_day;
+  $(document).on("click", ".days div", function(e) {
     e.preventDefault();
+    
     day_clicked = $(this).data('day-chosen');
+    $('.' + previous_day + ' a').removeClass('active_day');
+    previous_day = day_clicked
+    $('.' + day_clicked + ' a').addClass('active_day');
+    
     console.log("You clicked: " + day_clicked);
     $(".times").show();
+
     
   }); // end of click statement
   $(document).on("click", ".times a div", function(e) {
     e.preventDefault();
     time_clicked = $(this).data('time-chosen');
     console.log("You clicked: " + time_clicked);
-    $("#morning li, #afternoon li, #evening li").remove();
+    $("#send_email").show();
+
+    $("#morning ul, #afternoon ul, #evening ul").remove();
 
     $.getJSON('/tutor?time_chosen=' + time_clicked + '&day_chosen=' + day_clicked, function(data) {
       console.log(data);
@@ -48,7 +56,9 @@ $(document).ready(function() {
       placeHolder = $('#' + time_clicked);
       
       html = template(data);
+      
       placeHolder.append(html);
+      
       
     }); // end of JSON statement
   }); // end of click statement
