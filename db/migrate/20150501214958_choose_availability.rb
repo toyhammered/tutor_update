@@ -4,8 +4,8 @@ class ChooseAvailability < ActiveRecord::Migration
       t.belongs_to :tutor, index:true
       t.string :day
       t.string :time
-      t.time :start_time
-      t.time :end_time
+      t.string :start_time
+      t.string :end_time
       t.integer :room
       
       
