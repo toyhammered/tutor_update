@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20150501214958) do
     t.integer "tutor_id"
     t.string  "day"
     t.string  "time"
-    t.time    "start_time"
-    t.time    "end_time"
+    t.string  "start_time"
+    t.string  "end_time"
     t.integer "room"
   end
 
