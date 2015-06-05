@@ -25,3 +25,8 @@ Precompiling assets:
   
 SendGrid
   https://gist.github.com/acwright/1944639
+  
+
+Checking Heroku:
+  Logs:  heroku logs -p postgres -t
+  Info: heroku pg:info

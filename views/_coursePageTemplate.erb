@@ -1,80 +1,66 @@
 <script id="course-page-template" type="text/x-handlebars-template">
   <div class="main container reserve">
     <h3>{{name}}</h3>
-  
-  
+
+
     <div class="days row">
       <a href="#">
       <div class="col-xs-2" data-day-chosen="monday">
         <h2>Monday</h2>
-      </div></a> 
-      
-      <a href="#">
+      </div></a> <a href="#">
       <div class="col-xs-2" data-day-chosen="tuesday">
         <h2>Tuesday</h2>
-      </div></a> 
-      
-      <a href="#">
+      </div></a> <a href="#">
       <div class="col-xs-2" data-day-chosen="wednesday">
         <h2>Wednesday</h2>
-      </div></a> 
-      
-      <a href="#">
+      </div></a> <a href="#">
       <div class="col-xs-2" data-day-chosen="thursday">
         <h2>Thursday</h2>
-      </div></a> 
-      
-      <a href="#">
+      </div></a> <a href="#">
       <div class="col-xs-2" data-day-chosen="friday">
         <h2>Friday</h2>
-      </div></a> 
-      
-      <a href="#">
+      </div></a> <a href="#">
       <div class="col-xs-2" data-day-chosen="saturday">
         <h2>Saturday</h2>
       </div></a>
     </div>
-    
+
+
     <div class="row times">
-    
-      
-        <a href="#">
-          <div class="col-xs-2" data-time-chosen="morning">
-              <h2>Morning</h2>
-          </div>
-        </a>
-        <ul id="morning">
-        
-        </ul>
-      
-      
-        <a href="#">
-          <div class="col-xs-2" data-time-chosen="afternoon">
-              <h2>Afternoon</h2>
-          </div>
-        </a>
-        <ul id="afternoon">
-        
-        </ul>
-      
+      <ul id="navigation">
+        <li class="col-xs-2" data-time-chosen="morning">
+          <a href="#">Morning</a>
 
-        <a href="#">
-          <div class="col-xs-2" data-time-chosen="evening">
-              <h2>Evening</h2>
-          </div>
-        </a>
-        <ul id="evening">
-        
-        </ul>
+          <ul id="morning">
+          </ul>
+        </li>
+
+
+        <li class="col-xs-2" data-time-chosen="afternoon">
+          <a href="#">Afternoon</a>
+
+          <ul id="afternoon">
+          </ul>
+        </li>
+
+
+        <li class="col-xs-2" data-time-chosen="evening">
+          <a href="#">Evening</a>
+
+          <ul id="evening">
+          </ul>
+        </li>
+      </ul>
     </div>
-    
-      <form id="send_email" enctype="application/JSON">
-      <input type="text" name="fullname" placeholder="Full Name" value="Daniel Rassiner"><br>
-      <input type="text" name="subject" placeholder="Email Subject" value="Web Help"><br>
-      <textarea name="message" rows="10" cols="50" placeholder="Your Message Here" >I need Help with web design homework!</textarea>
-      <input type="submit" formmethod="post" formaction="/email" value="Send Email">
-    </form>
-      
 
+
+    <form id="send_email" name="send_email">
+      <input name="fullname" placeholder="Full Name" type="text" value="Daniel Rassiner"><br>
+      <input name="subject" placeholder="Email Subject" type="text" value="Web Help"><br>
+
+      <textarea cols="50" name="message" placeholder="Your Message Here" rows="10">
+      I need Help with web design homework!
+      </textarea> <input formaction="/email" formmethod="post" type="submit" value="Send Email">
+    </form>
   </div>
 </script>

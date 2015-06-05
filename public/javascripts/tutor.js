@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     
   }); // end of click statement
-  $(document).on("click", ".times a div", function(e) {
+  $(document).on("click", ".times #navigation li", function(e) {
     e.preventDefault();
     time_clicked = $(this).data('time-chosen');
     console.log("You clicked: " + time_clicked);
@@ -54,7 +54,6 @@ $(document).ready(function() {
       raw_template = $('#course-page-' + time_clicked).html();
       template = Handlebars.compile(raw_template);
       placeHolder = $('#' + time_clicked);
-      
       html = template(data);
       
       placeHolder.append(html);

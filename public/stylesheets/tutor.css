@@ -140,17 +140,11 @@ h2 {
 div .main.container.reserve {
     border: thin solid #ED3538;
 }
-.row.times {
-    margin-top: 4em;
-    
-}
+
+/*Day section*/
 
 /* clicking on day (ie: Monday) */
 
-
-.row.times .col-xs-2 h3{
-    font-size:2rem;
-}
 .row.days .col-xs-2 h3{
     font-size:2rem;
 }
@@ -173,30 +167,11 @@ div .main.container.reserve {
      margin-top:1rem;
 }
 
-.row.times h2
-{
-     margin-left: 0rem;
-     margin-top:1rem;
-}
-
- .row.times .col-xs-2 {
-    background-color: #FAC6D1;
-    margin-right: 0.1rem;
-    padding: 0rem;
-    border: thin solid #F681B9;
-    text-align: center;
-    font-size:1rem;
-    width:16.58%;
-
-   
-} 
-
 .row.days .col-xs-2:link
 {
  color:#f2ee9c;
   text-decoration:none;
 }
-
 
 .row.days .col-xs-2:visited
 {
@@ -204,7 +179,6 @@ color:#424242;
 text-decoration:none;
 background-color: #f9f906;
 }
-
 
 
 .row.days .col-xs-2:hover
@@ -223,22 +197,26 @@ background-color: #f2ea22;
 }
 
 
-.main.container .row.times 
+/*time section*/
+
+.row.times 
 {
     margin-top: 4em;
+    border: thin solid #f9f906;
+   
 }
 
-#morning ul:nth-child(odd), #afternoon ul:nth-child(odd), #evening ul:nth-child(odd) 
+#morning ul a:nth-child(odd), #afternoon ul:nth-child(odd), #evening ul:nth-child(odd) 
 {
     background-color: #FCE6EA;
   
 }
-#morning ul:nth-child(even), #afternoon ul:nth-child(even), #evening ul:nth-child(even) {
+
+#morning ul a:nth-child(even), #afternoon ul:nth-child(even), #evening ul:nth-child(even) 
+{
     background-color: #FAC6D1;
   
 }
-
-
 
 #morning ul, #afternoon ul, #evening ul 
 {   
@@ -246,10 +224,7 @@ background-color: #f2ea22;
     padding:0;
     margin-bottom:0;
     margin-left:-3.5%;
-    width:17.1%;
-
-   
-   
+    width:30%;
 }
 
 #morning ul li, #afternoon ul li, #evening ul li
@@ -257,9 +232,7 @@ background-color: #f2ea22;
     
     padding:0;
     margin:0;
-    position:relative;    
-
-      
+    position:relative;   
 }
 
 ul
@@ -267,9 +240,96 @@ ul
     margin-bottom: 0;
 }
 
-form
+ul#navigation 
 {
+    margin-left:-40px;
+}
+
+ul#navigation li 
+{
+	background-color:#FAC6D1;
+	padding:30px 50px;
+	margin-right: 0.1rem;
+	margin-left: 0rem;
+	padding: 0rem;
+	font-size:2rem;
+
+	color:#fd3cb6;
+    text-decoration:none;
+    font-size:2rem;
+	display:inline;
+	
+	float:left;
+	position:relative;
+	border: thin solid #F681B9;
+    text-align: center;
     
     
 }
-    
+
+/*morning afternoon eve boxes*/
+ul#navigation li:hover > a 
+{
+
+	color:#616161;
+	text-decoration:none;
+	display:inline-block;
+	
+	/*-webkit-transition:color 0.2s linear, background 0.2s linear;	
+	-moz-transition:color 0.2s linear, background 0.2s linear;	
+	-o-transition:color 0.2s linear, background 0.2s linear;	
+	transition:color 0.2s linear, background 0.2s linear;	*/
+}
+
+
+/* name time room boxes */
+ul#navigation li:hover > ul
+{
+	/* visibility:visible; */
+	opacity:1;
+	color:#424242;
+	background-color: #f9f906;
+	/* text-decoration:none; */
+}
+
+ul#navigation ul, ul#navigation ul li ul 
+{
+	
+	list-style: none;
+    margin: 0;
+    padding: 0;    
+	/* visibility:hidden; */
+    /* position: absolute;*/
+    z-index: 99999;
+	width:180px;
+	/* background:#f8f8f8; */
+	/* opacity:0; */
+	
+	/*-webkit-transition:opacity 0.2s linear, visibility 0.2s linear; 
+	-moz-transition:opacity 0.2s linear, visibility 0.2s linear; 
+	-o-transition:opacity 0.2s linear, visibility 0.2s linear; 
+	transition:opacity 0.2s linear, visibility 0.2s linear; */	
+}
+
+
+ul#navigation ul 
+{
+    top: 43px;
+    left: 1px;
+
+}
+
+ul#navigation ul li ul 
+{
+    top: 0;
+    left: 181px;
+}
+
+ul#navigation ul li 
+{
+	clear:both;
+	width:100%;
+	border:0 none;
+	border-bottom:1px solid #c9c9c9;
+}
+
