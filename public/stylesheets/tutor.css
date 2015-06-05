@@ -130,8 +130,8 @@ h1 {
 h2 {
     float: left;
     width: 18rem;
+    margin-top:3rem;
     font-size: 2rem;
-    margin-top: 3rem;
     margin-left: 1rem;
 }
 
@@ -151,6 +151,7 @@ div .main.container.reserve {
 
 .row.days .col-xs-2 {
     background-color: rgba(252, 253, 142, 1);
+    
     margin-right: 0.1rem;
     margin-bottom: 0.1rem;
     padding: 0rem;
@@ -161,10 +162,11 @@ div .main.container.reserve {
     
 }
 
-.row.days h2
+.row.days h2, row.times h2
 {
      margin-left: 0rem;
      margin-top:1rem;
+     color:#f2be09;
 }
 
 .row.days .col-xs-2:link
@@ -202,53 +204,40 @@ background-color: #f2ea22;
 .row.times 
 {
     margin-top: 4em;
-    border: thin solid #f9f906;
-   
-}
-
-#morning ul a:nth-child(odd), #afternoon ul:nth-child(odd), #evening ul:nth-child(odd) 
-{
-    background-color: #FCE6EA;
-  
-}
-
-#morning ul a:nth-child(even), #afternoon ul:nth-child(even), #evening ul:nth-child(even) 
-{
-    background-color: #FAC6D1;
-  
-}
-
-#morning ul, #afternoon ul, #evening ul 
-{   
-    list-style-type: none;   
-    padding:0;
-    margin-bottom:0;
-    margin-left:-3.5%;
-    width:30%;
-}
-
-#morning ul li, #afternoon ul li, #evening ul li
-{
     
-    padding:0;
-    margin:0;
-    position:relative;   
 }
+
+
+#morning .morning_list:nth-child(odd) > a li, 
+#afternoon .afternoon_list:nth-child(odd) > a li, 
+#evening .evening_list:nth-child(odd) > a li
+{
+    background-color: black;
+  
+}
+
+#morning .morning_list:nth-child(even) > a li, 
+#afternoon .afternoon_list:nth-child(even) > a li, 
+#evening .evening_list:nth-child(even) > a li
+{
+    background-color: orange;
+  
+}
+
 
 ul
 {
-    margin-bottom: 0;
+    margin-bottom:0;
 }
 
-ul#navigation 
+#navigation 
 {
     margin-left:-40px;
 }
 
-ul#navigation li 
+#navigation li 
 {
 	background-color:#FAC6D1;
-	padding:30px 50px;
 	margin-right: 0.1rem;
 	margin-left: 0rem;
 	padding: 0rem;
@@ -256,7 +245,6 @@ ul#navigation li
 
 	color:#fd3cb6;
     text-decoration:none;
-    font-size:2rem;
 	display:inline;
 	
 	float:left;
@@ -264,33 +252,33 @@ ul#navigation li
 	border: thin solid #F681B9;
     text-align: center;
     
-    
 }
 
-/*morning afternoon eve boxes*/
-ul#navigation li:hover > a 
+#navigation ul, #navigation ul li 
 {
-
-	color:#616161;
-	text-decoration:none;
-	display:inline-block;
 	
-	/*-webkit-transition:color 0.2s linear, background 0.2s linear;	
-	-moz-transition:color 0.2s linear, background 0.2s linear;	
-	-o-transition:color 0.2s linear, background 0.2s linear;	
-	transition:color 0.2s linear, background 0.2s linear;	*/
+	list-style: none;
+    clear:both;
+	width:100%;
+	border:0 none;
+	border-bottom:1px solid #c9c9c9;
 }
 
-
-/* name time room boxes */
-ul#navigation li:hover > ul
+#navigation > li a
 {
-	/* visibility:visible; */
-	opacity:1;
-	color:#424242;
-	background-color: #f9f906;
-	/* text-decoration:none; */
+    color:red;
 }
+
+#navigation > li a:hover
+{
+    color:blue;
+    padding:0;
+}
+
+#navigation .pfix {
+    margin:1rem;
+}
+
 
 ul#navigation ul, ul#navigation ul li ul 
 {
@@ -301,7 +289,7 @@ ul#navigation ul, ul#navigation ul li ul
 	/* visibility:hidden; */
     /* position: absolute;*/
     z-index: 99999;
-	width:180px;
+	width:100%;
 	/* background:#f8f8f8; */
 	/* opacity:0; */
 	
@@ -311,25 +299,4 @@ ul#navigation ul, ul#navigation ul li ul
 	transition:opacity 0.2s linear, visibility 0.2s linear; */	
 }
 
-
-ul#navigation ul 
-{
-    top: 43px;
-    left: 1px;
-
-}
-
-ul#navigation ul li ul 
-{
-    top: 0;
-    left: 181px;
-}
-
-ul#navigation ul li 
-{
-	clear:both;
-	width:100%;
-	border:0 none;
-	border-bottom:1px solid #c9c9c9;
-}
 
