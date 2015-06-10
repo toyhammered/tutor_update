@@ -61,12 +61,14 @@
     </div>
 
 
-    <form id="send_email" name="send_email">
+    <form id="send_email" name="send_email" class="pure-form">
       <input name="fullname" placeholder="Full Name" type="text" value="Daniel Rassiner"><br>
       <input name="subject" placeholder="Email Subject" type="text" value="Web Help"><br>
 
       <textarea cols="50" name="message" placeholder="Your Message Here" rows="10">I need Help with web design homework!
-      </textarea> <input formaction="/email" formmethod="post" type="submit" value="Send Email">
+      </textarea>
+     <br>
+     <input formaction class="pure-button pure-input-1-2 pure-button-primary"="/email" formmethod="post" type="submit" value="Send Email">
     </form>
   </div>
 </script>

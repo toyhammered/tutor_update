@@ -299,4 +299,23 @@ ul#navigation ul, ul#navigation ul li ul
 	transition:opacity 0.2s linear, visibility 0.2s linear; */	
 }
 
+/*Form*/
+
+textarea
+{
+    padding: 0.5em 0.6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input
+{
+    margin-bottom:2rem;
+}
 
